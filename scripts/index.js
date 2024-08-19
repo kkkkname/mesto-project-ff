@@ -13,10 +13,16 @@ function createCard(cardData) {
     cardTitle.textContent = cardData.name;
 
     deleteButton.addEventListener('click', () => {
-        cardElement.remove();
+        deleteCard(cardElement);
     });
 
     return cardElement;
+}
+
+// Только перечитав задание, увидел, что удаление карточки должно быть отдельной функцией deleteCard, а Вы уже начали проверять..
+
+function deleteCard (cardElement) {
+    cardElement.remove();
 }
 
 initialCards.forEach(cardData => {
