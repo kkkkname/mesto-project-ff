@@ -71,8 +71,8 @@ function submitPlaceForm(popup, event) {
     }
     const cardElement = createCard(cardData, deleteCard, likeCard, openImagePopup);
     placeList.prepend(cardElement);
-    placeForm.reset();
     closePopup(popup);
+    placeForm.reset();
 }
 
 placeForm.addEventListener('submit', (evt) => submitPlaceForm(popupAddCard, evt));
