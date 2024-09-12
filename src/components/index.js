@@ -1,7 +1,7 @@
 import '../pages/index.css'
-import { initialCards} from "./initialCards";
-import { createCard, deleteCard, likeCard} from "./card";
-import { closePopup, openPopup} from "./modal";
+import { cards } from "./cards";
+import { createCard, deleteCard, likeCard } from "./card";
+import { closePopup, openPopup } from "./modal";
 
 const popups = document.querySelectorAll('.popup');
 const popupProfile = document.querySelector('.popup_type_edit');
@@ -28,7 +28,7 @@ function openImagePopup(image) {
     openPopup(popupCardImage);
 }
 
-initialCards.forEach((cardData) => {
+cards.forEach((cardData) => {
     const cardElement = createCard(cardData, deleteCard, likeCard, openImagePopup);
     placeList.append(cardElement);
 })

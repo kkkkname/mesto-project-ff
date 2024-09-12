@@ -15,4 +15,4 @@ function closePopup(popup) {
     document.removeEventListener('keydown', keyHandler);
 }
 
-export { openPopup, closePopup };
+export { openPopup, closePopup }
