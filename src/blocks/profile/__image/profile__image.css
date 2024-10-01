@@ -10,6 +10,25 @@
   background-image: url('../../../images/avatar.jpg');
 }
 
+.profile__image::after {
+  content: '';
+  display: block;
+  background-image: url(../../../images/edit-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 26px;
+  background-color: rgba(0, 0, 0, 0.7);
+  block-size: 120px;
+  inline-size: 120px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.profile__image:hover::after {
+  opacity: 1;
+}
+
 @media screen and (max-width: 740px) {
   .profile__image {
     margin: 0 10px 0 0;
